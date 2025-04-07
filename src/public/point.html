@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neoponto - Marcação de Ponto</title>
+    <link rel="stylesheet" href="/css/point/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Neoponto Logo">
+        </div>
+        <h1>Neoponto</h1>
+        <form id="pointForm">
+            <div class="form-group">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+            </div>
+            <button type="submit">Marcar Ponto</button>
+        </form>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Comprovante de Ponto</h2>
+            <p><strong>Nome:</strong> <span id="userName"></span></p>
+            <p><strong>Matrícula:</strong> <span id="userMatricula"></span></p>
+            <p><strong>Data:</strong> <span id="recordDate"></span></p>
+            <p><strong>Hora:</strong> <span id="recordTime"></span></p>
+            <p><strong>Tipo:</strong> <span id="recordType"></span></p>
+            <button id="closePopup">Fechar</button>
+        </div>
+    </div>
+
+    <script src="/js/point/script.js"></script>
+</body>
+</html> 

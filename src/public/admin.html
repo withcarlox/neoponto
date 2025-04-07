@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neoponto - Área Administrativa</title>
+    <link rel="stylesheet" href="/css/admin/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Neoponto Logo">
+        </div>
+        <h1>Área Administrativa</h1>
+        
+        <div id="loginForm" class="form-section">
+            <h2>Login</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <div id="adminPanel" class="form-section hidden">
+            <div class="admin-header">
+                <h2>Painel Administrativo</h2>
+                <button id="logoutBtn">Sair</button>
+            </div>
+
+            <div class="admin-content">
+                <div class="form-section">
+                    <h3>Cadastrar Usuário</h3>
+                    <form id="userForm">
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" id="cpf" name="cpf" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Cargo:</label>
+                            <input type="text" id="role" name="role" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Departamento:</label>
+                            <select id="department" name="department" required>
+                                <option value="">Selecione...</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Comercial">Comercial</option>
+                                <option value="Financeiro">Financeiro</option>
+                                <option value="RH">RH</option>
+                                <option value="TI">TI</option>
+                            </select>
+                        </div>
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </div>
+
+                <div class="form-section">
+                    <h3>Buscar Usuários</h3>
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchDepartment">Departamento:</label>
+                            <select id="searchDepartment" name="searchDepartment" required>
+                                <option value="">Selecione...</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Comercial">Comercial</option>
+                                <option value="Financeiro">Financeiro</option>
+                                <option value="RH">RH</option>
+                                <option value="TI">TI</option>
+                            </select>
+                        </div>
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/admin/script.js"></script>
+</body>
+</html> 

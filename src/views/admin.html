@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neoponto - Área Administrativa</title>
+    <link rel="stylesheet" href="/css/admin/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginSection" class="section">
+            <div class="back-arrow">
+                <a href="/"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </div>
+            <h1>Login Administrativo</h1>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <div id="adminSection" class="section" style="display: none;">
+            <div class="back-arrow">
+                <a href="/"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </div>
+            <h1>Área Administrativa</h1>
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="register">Cadastrar Usuário</button>
+                <button class="tab-button" data-tab="search">Buscar Usuário</button>
+            </div>
+
+            <div id="registerTab" class="tab-content active">
+                <form id="registerForm">
+                    <input type="text" id="name" placeholder="Nome" required>
+                    <input type="text" id="cpf" placeholder="CPF" maxlength="11" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <select id="role" required>
+                        <option value="">Selecione o cargo</option>
+                        <option value="Desenvolvedor">Desenvolvedor</option>
+                        <option value="Gerente">Gerente</option>
+                        <option value="Analista">Analista</option>
+                    </select>
+                    <select id="department" required>
+                        <option value="">Selecione o departamento</option>
+                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Administrativo">Administrativo</option>
+                    </select>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+
+            <div id="searchTab" class="tab-content">
+                <form id="searchForm">
+                    <select id="searchDepartment" required>
+                        <option value="">Selecione o departamento</option>
+                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Administrativo">Administrativo</option>
+                    </select>
+                    <button type="submit">Buscar</button>
+                </form>
+                <div id="searchResults"></div>
+            </div>
+
+            <button id="logoutButton" class="logout-button">Sair</button>
+        </div>
+    </div>
+
+    <script src="/js/admin/admin.js"></script>
+</body>
+</html> 
